@@ -1,7 +1,7 @@
 # ascii-descriptor
 A javascript library/tool for creating data descriptions using monospace ascii symbols.
 
-**Note**: If you just want a ascii description without having to write it yourself, you can use my online tool. (TBD)
+**Note**: If you just want an ascii description without having to write it yourself, you can use my online tool. (TBD)
 
 ## Getting Started
 
