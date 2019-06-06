@@ -1,5 +1,5 @@
 # ascii-descriptor
-A javascript tool for creating descriptions of data using monospace ascii symbols.
+A javascript tool for creating data descriptions using monospace ascii symbols.
 
 ## Examples
 
