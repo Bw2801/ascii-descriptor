@@ -1,5 +1,5 @@
-# ascii-descriptor
-A javascript/node library for creating data descriptions using monospace border symbols.
+# unicode-descriptor
+A javascript/node library for creating text descriptions using unicode border symbols.
 
 **Note**: If all you want is just to generate a single ascii description, you can use my online tool (TBD).
 
