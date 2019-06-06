@@ -1,3 +1,5 @@
+'use strict';
+
 const Descriptor = function (config = {}) {
   this.characters = config.characters || {hl: '─', vl: '│', ctl: '┘', ctr: '└', cross: '┼', tt: '┴', tb: '┬', tr: '├', tl: '┤'};
   this.indentLabels = typeof config.indentLabels === "undefined" ? true : config.indentLabels;
@@ -205,5 +207,3 @@ Descriptor.prototype.addSection = function (offset, length, label) {
 Descriptor.prototype.toString = function () {
   return this.lines.map((line) => line.join('')).join('\n');
 };
-
-export default Descriptor;
