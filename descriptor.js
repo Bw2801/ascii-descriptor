@@ -1,6 +1,6 @@
 'use strict';
 
-const Descriptor = function (config = {}) {
+var Descriptor = function (config = {}) {
   this.characters = config.characters || {hl: '─', vl: '│', ctl: '┘', ctr: '└', cross: '┼', tt: '┴', tb: '┬', tr: '├', tl: '┤'};
   this.indentLabels = typeof config.indentLabels === "undefined" ? true : config.indentLabels;
   this.sections = [];
@@ -14,9 +14,9 @@ Descriptor.prototype.generate = function () {
   
   // Draw the indicator lines.
   sections.forEach((section, index) => {
-  	const lineIndex = section.line;
-    const line = sectionLines[lineIndex];
-  	const indicatorIndex = Math.max(0, line.slice(section.offset, section.offset + section.length).indexOf(this.characters.hl)) + section.offset;
+    var lineIndex = section.line;
+    var line = sectionLines[lineIndex];
+    var indicatorIndex = Math.max(0, line.slice(section.offset, section.offset + section.length).indexOf(this.characters.hl)) + section.offset;
     section.indicator = indicatorIndex;
     
     this.setIndicatorCharacter(line, indicatorIndex);
@@ -33,19 +33,19 @@ Descriptor.prototype.generate = function () {
 };
 
 Descriptor.prototype.generateSectionLines = function () {
-	const lines = [];
-  const sections = [];
+  var lines = [];
+  var sections = [];
   
-	var currentSections = this.sections.slice();
+  var currentSections = this.sections.slice();
   
   // Draw the sections.
   while (currentSections.length > 0) {
-  	const line = [];
-  	const nextSections = [];
+    var line = [];
+    var nextSections = [];
   
     // Determine which sections fit on the current line.
     for (var sectionIndex = 0; sectionIndex < currentSections.length; sectionIndex++) {
-      const section = currentSections[sectionIndex];
+      var section = currentSections[sectionIndex];
       section.line = lines.length;
       
       // Check whether the section fits in this line.
@@ -83,17 +83,17 @@ Descriptor.prototype.generateSectionLines = function () {
 };
 
 Descriptor.prototype.generateIndicatorLines = function (sectionLines, sections) {
-	const lines = [];
+  var lines = [];
 
   // Draw label lines.
-  const indicatorSections = sections.sort((a, b) => a.indicator - b.indicator);
+  var indicatorSections = sections.sort((a, b) => a.indicator - b.indicator);
   
   // Determine where the labels should begin.
-  const indicatorTargetIndex = Math.max(...indicatorSections.map((section) => section.indicator)) + 2;
+  var indicatorTargetIndex = Math.max(...indicatorSections.map((section) => section.indicator)) + 2;
   
   if (this.indentLabels) {
     for (var i = 0; i < sections.length; i++) {
-      const line = [];
+      var line = [];
 
       indicatorSections.filter((section, index) => {
         return index <= (sections.length - 1 - i);
@@ -112,11 +112,11 @@ Descriptor.prototype.generateIndicatorLines = function (sectionLines, sections) 
       lines.push(line);
     }
   } else {
-  	var sectionsLeft = indicatorSections;
+    var sectionsLeft = indicatorSections;
     
     while (sectionsLeft.length > 0) {
-    	var nextSections = [];
-      const line = [];
+      var nextSections = [];
+      var line = [];
       
     	sectionsLeft.forEach((section, index) => {
         this.fillWithChars(line, section.indicator, ' ');
@@ -159,7 +159,7 @@ Descriptor.prototype.setConnectorCharacter = function (data, index) {
     return;
   }
 
-	const currentChar = data[index];
+  var currentChar = data[index];
   switch (currentChar) {
   	case ' ':
   	case this.characters.hl: return (data[index] = this.characters.vl);
@@ -170,7 +170,7 @@ Descriptor.prototype.setConnectorCharacter = function (data, index) {
 }
 
 Descriptor.prototype.setIndicatorCharacter = function (data, index) {
-	const currentChar = data[index];
+  var currentChar = data[index];
   switch (currentChar) {
   	case this.characters.hl: return (data[index] = this.characters.tb);
     case this.characters.ctr: return (data[index] = this.characters.tr);
