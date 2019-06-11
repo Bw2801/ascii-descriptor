@@ -5,7 +5,13 @@ A javascript/node library for creating text descriptions using unicode border sy
 
 ## Getting Started
 
-TBD
+Install the package using npm/yarn:
+
+```
+npm install unicode-descriptor
+// or
+yarn add unicode-descriptor
+```
 
 ## Examples
 
