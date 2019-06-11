@@ -35,7 +35,7 @@ This statement is false. This is another sentence.
  Paradox                  Not a paradox
 ```
 
-Custom ascii character sets and insersecting sections are supported as well.
+Custom ascii character sets and insersecting sections are supported as well and readable to some extend.
 
 ```
 https://benedikt.dev/some/dir?key=value
