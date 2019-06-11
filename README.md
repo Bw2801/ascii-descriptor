@@ -7,9 +7,9 @@ A javascript/node library for creating text descriptions using unicode border sy
 
 Install the package using npm/yarn:
 
-```
+```sh
 npm install unicode-descriptor
-// or
+# or
 yarn add unicode-descriptor
 ```
 
