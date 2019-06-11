@@ -1,0 +1,20 @@
+{
+  "name": "unicode-descriptor",
+  "version": "1.0.0",
+  "description": "A javascript/node library for creating text descriptions using unicode border symbols.",
+  "main": "index.js",
+  "repository": "git@github.com:Bw2801/unicode-descriptor.git",
+  "author": "Benedikt Wüller<me@benedikt.dev>",
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "build": "webpack"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "babel-loader": "^8.0.6",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
+  }
+}
