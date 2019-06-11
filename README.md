@@ -15,16 +15,38 @@ yarn add unicode-descriptor
 
 The built library lies in `dist/unicode-descriptor.js`.
 
-## Examples
+## Usage
+
+```javascript
+var descriptor = new UnicodeDescriptor();
+
+descriptor.addSection(0, 5, 'Section A');
+descriptor.addSection(5, 5, 'Section B');
+descriptor.addSection(9, 4, 'Section C');
+
+console.log(descriptor.toString());
+```
+
+Result:
 
 ```
-52 49 46 46 XX XX XX XX
-└┬────────┘ └┬────────┘
- │           └─ Content Length
- └───────────── Start Sequence
+Some text
+└┬──┘└┬──┴┬─┘
+ │    │   └─ Section C
+ │    └───── Section B
+ └────────── Section A
 ```
 
-If desired, the label indentation can be disabled.
+### Configuration
+
+You can pass a configuration object to the constructor of the descriptor.
+
+#### `indentLabels`
+
+Type: `boolean`
+
+Determines whether to indent the labels to the right. Defaults to `true`.
+If set to `false`, the labels will be displayed in a single line if possible.
 
 ```
 https://github.benedikt.dev
@@ -35,15 +57,31 @@ https://github.benedikt.dev
  Protocol
 ```
 
-If the labels are short enough, they can fit on the same line when not indented.
-
 ```
 This statement is false. This is another sentence.
 └┬─────────────────────┘ └┬──────────────────────┘
  Paradox                  Not a paradox
 ```
 
-Custom ascii character sets and insersecting sections are supported as well and readable to some extend.
+#### `characters`
+
+Type: `object`
+
+Contains the characters to be used. The following table contains the required and default values.
+
+| Key | Description | Default Value |
+| --- | ----------- | ------------- |
+| `hl` | Horizontal Line | `─` |
+| `vl` | Vertical Line | `│` |
+| `ctl` | Corner Top Left | `┘` |
+| `ctr` | Corner Top Right | `└` |
+| `tt` | T-Top | `┴` |
+| `tb` | T-Bottom | `┬` |
+| `tr` | T-Right | `├` |
+| `tl` | T-Left | `┤` |
+| `cross` | Cross | `┼` |
+
+Example with intersecting sections:
 
 ```
 https://benedikt.dev/some/dir?key=value
