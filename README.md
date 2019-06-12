@@ -21,8 +21,8 @@ The built library lies in `dist/unicode-descriptor.js`.
 var descriptor = new UnicodeDescriptor();
 
 descriptor.addSection(0, 5, 'Section A');
-descriptor.addSection(5, 5, 'Section B');
-descriptor.addSection(9, 4, 'Section C');
+descriptor.addSection(6, 5, 'Section B');
+descriptor.addSection(12, 5, 'Section C');
 
 console.log(descriptor.toString());
 ```
@@ -30,11 +30,11 @@ console.log(descriptor.toString());
 Result:
 
 ```
-Some text
-└┬──┘└┬──┴┬─┘
- │    │   └─ Section C
- │    └───── Section B
- └────────── Section A
+Lorem ipsum dolor
+└┬──┘ └┬──┘ └┬──┘
+ │     │     └─ Section C
+ │     └─────── Section B
+ └───────────── Section A
 ```
 
 ### Configuration
