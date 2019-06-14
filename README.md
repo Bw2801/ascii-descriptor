@@ -87,11 +87,10 @@ Contains the characters to be used. The following table contains the required an
 Example with intersecting sections:
 
 ```
-https://benedikt.dev/some/dir?key=value
-╘╤══════│══════════││═══════││════════╡
- │      ╘╤═════════╛╘╤══════╛╘╤═══════╛
- │       │           │        ╘═ Query
- │       │           ╘══════════ Path
- │       ╘══════════════════════ Domain
- ╘══════════════════════════════ URL
+Lorem ipsum dolor sit amet
+╘╤════│═══╛ ╘╤══│════════╛
+ │    ╘╤═════│══╛
+ │     │     ╘═ Section C
+ │     ╘═══════ Section B
+ ╘═════════════ Section A
 ```
