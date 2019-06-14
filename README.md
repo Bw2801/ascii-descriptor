@@ -3,6 +3,8 @@ A javascript/node library for creating text descriptions using unicode border sy
 
 **Note**: If all you want is just to generate a single descriptor right now, you can use [my online tool](https://benedikt.dev/unicode-descriptor/).
 
+Example usage: Check out the source code of my [unicode-descriptor-tool](https://github.com/Bw2801/unicode-descriptor-tool).
+
 ## Getting Started
 
 Install the package using npm/yarn:
