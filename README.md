@@ -2,9 +2,7 @@
 A javascript/node library for creating text descriptions using unicode border symbols.
 
 ## Demo
-[Demo Tool](https://benedikt.dev/unicode-descriptor/)
-
-Source code: [unicode-descriptor-tool](https://github.com/Bw2801/unicode-descriptor-tool).
+[Demo Tool](https://benedikt.dev/unicode-descriptor/) ([Source Code](https://github.com/Bw2801/unicode-descriptor-tool))
 
 ## Getting Started
 
