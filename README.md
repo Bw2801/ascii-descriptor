@@ -16,7 +16,7 @@ npm install unicode-descriptor
 yarn add unicode-descriptor
 ```
 
-The built library lies in `dist/unicode-descriptor.js`.
+The built library lies in `dist/unicode-descriptor.js`
 
 ## Usage
 
