@@ -1,9 +1,10 @@
 # unicode-descriptor
 A javascript/node library for creating text descriptions using unicode border symbols.
 
-**Note**: If all you want is just to generate a single descriptor right now, you can use [my online tool](https://benedikt.dev/unicode-descriptor/).
+## Demo
+[Demo Tool](https://benedikt.dev/unicode-descriptor/)
 
-Example usage: Check out the source code of my [unicode-descriptor-tool](https://github.com/Bw2801/unicode-descriptor-tool).
+Source code: [unicode-descriptor-tool](https://github.com/Bw2801/unicode-descriptor-tool).
 
 ## Getting Started
 
@@ -18,6 +19,8 @@ yarn add unicode-descriptor
 The built library lies in `dist/unicode-descriptor.js`.
 
 ## Usage
+
+**Note**: Some sites (like `npmjs.com`) use a monospace font which does not support the standard [unicode box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character) correctly. Because of that, the examples may be misaligned.
 
 ```javascript
 var descriptor = new UnicodeDescriptor();
