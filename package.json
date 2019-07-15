@@ -1,6 +1,6 @@
 {
   "name": "unicode-descriptor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A javascript/node library for creating text descriptions using unicode border symbols.",
   "main": "index.js",
   "homepage": "https://github.com/Bw2801/unicode-descriptor#readme",
