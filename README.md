@@ -1,7 +1,8 @@
 # unicode-descriptor
 A javascript/node library for creating text descriptions using unicode border symbols.
 
-**Note**: If all you want is just to generate a single descriptor right now, you can use my online tool (TBD).
+## Demo
+[Demo Tool](https://benedikt.dev/unicode-descriptor/) ([Source Code](https://github.com/Bw2801/unicode-descriptor-tool))
 
 ## Getting Started
 
@@ -13,16 +14,18 @@ npm install unicode-descriptor
 yarn add unicode-descriptor
 ```
 
-The built library lies in `dist/unicode-descriptor.js`.
+The built library lies in `dist/unicode-descriptor.js`
 
 ## Usage
+
+**Note**: Some sites (like `npmjs.com`) use a monospace font which does not support the standard [unicode box-drawing characters](https://en.wikipedia.org/wiki/Box-drawing_character) correctly. Because of that, the examples may be misaligned.
 
 ```javascript
 var descriptor = new UnicodeDescriptor();
 
 descriptor.addSection(0, 5, 'Section A');
-descriptor.addSection(5, 5, 'Section B');
-descriptor.addSection(9, 4, 'Section C');
+descriptor.addSection(6, 5, 'Section B');
+descriptor.addSection(12, 5, 'Section C');
 
 console.log(descriptor.toString());
 ```
@@ -30,11 +33,11 @@ console.log(descriptor.toString());
 Result:
 
 ```
-Some text
-└┬──┘└┬──┴┬─┘
- │    │   └─ Section C
- │    └───── Section B
- └────────── Section A
+Lorem ipsum dolor
+└┬──┘ └┬──┘ └┬──┘
+ │     │     └─ Section C
+ │     └─────── Section B
+ └───────────── Section A
 ```
 
 ### Configuration
@@ -84,11 +87,10 @@ Contains the characters to be used. The following table contains the required an
 Example with intersecting sections:
 
 ```
-https://benedikt.dev/some/dir?key=value
-╘╤══════│══════════││═══════││════════╡
- │      ╘╤═════════╛╘╤══════╛╘╤═══════╛
- │       │           │        ╘═ Query
- │       │           ╘══════════ Path
- │       ╘══════════════════════ Domain
- ╘══════════════════════════════ URL
+Lorem ipsum dolor sit amet
+╘╤════│═══╛ ╘╤══│════════╛
+ │    ╘╤═════│══╛
+ │     │     ╘═ Section C
+ │     ╘═══════ Section B
+ ╘═════════════ Section A
 ```
