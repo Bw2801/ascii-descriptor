@@ -1,6 +1,8 @@
 # unicode-descriptor
 A javascript/node library for creating text descriptions using unicode border symbols.
 
+[![npm version](https://badge.fury.io/js/unicode-descriptor.svg)](https://badge.fury.io/js/unicode-descriptor)
+
 ## Demo
 [Demo Tool](https://benedikt.dev/unicode-descriptor/) ([Source Code](https://github.com/Bw2801/unicode-descriptor-tool))
 
